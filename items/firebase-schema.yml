@@ -1,0 +1,49 @@
+root:
+  - users/{userID}/:
+    - name: String
+    - profilePicture: (reference to firebase storage object)
+  
+  - courses/{courseID}:
+    - name: String
+    - description: String
+    - archived: bool
+    - session:
+      - year: int
+      - semester: int
+    - tags: MAP
+      - {name}: MAP
+        - color: String (hex)
+        - subTags: [String] # null if no sub categories
+
+    - enrollments/{userID}:
+      - user: user_id # this is needed to query access a collection group while ensuring that a unique entry by using userid as doc id
+      - access: BLOCKED | PENDING | STUDENT | STAFF
+    
+    - posts/{postID}:
+      - authorId: String # UserID
+      - created: Timestamp
+      - title: String
+      - body: String
+      - keywords: [String] # List of relevant keywords
+      - postType: QUESTION | ANNOUNCEMENT
+      - tag: String
+      - subTag: String # Null if none
+      - upvoters: [userId]
+      - publicPost: bool
+      - anonymousPost: bool
+
+      ## If question
+      - solvedReplyId: String # ReplyID that solved it, null if not solved (only for questions)
+              
+      ## If assessment
+      - assessmentResult: PENDING | PASS | FAIL
+      - resultReplyId: String
+            
+      - replies/{replyID}:
+        - authorId: String # UserID
+        - created: Timestamp
+        - body: String
+        - replyToId: String # replyId, null if not a reply
+        - keywords: [String] # List of relevant keywords 
+        - upvoters: [userId]
+        - anonymousPost: bool

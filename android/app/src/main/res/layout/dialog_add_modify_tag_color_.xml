@@ -1,0 +1,90 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialog_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"/>
+
+    <EditText
+        android:id="@+id/tag_name_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_title2"
+        android:layout_marginTop="8dp"
+        android:gravity="top|start"
+        android:hint="Name of tag"
+        android:inputType="text"
+        android:lines="4"
+        android:maxLines="10"
+        android:scrollbars="vertical" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tag_name_text2"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/colour_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/blue_colour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Blue" />
+
+                <RadioButton
+                    android:id="@+id/red_colour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Red" />
+
+                <RadioButton
+                    android:id="@+id/green_colour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Green" />
+
+                <RadioButton
+                    android:id="@+id/yellow_colour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yellow" />
+
+                <RadioButton
+                    android:id="@+id/lightBlue_colour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Light Blue" />
+            </RadioGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/complete_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_scroll_view"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Done" />
+
+
+</RelativeLayout>

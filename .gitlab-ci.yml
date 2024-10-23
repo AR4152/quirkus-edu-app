@@ -1,0 +1,39 @@
+image: alvrme/alpine-android:android-33-jdk17-v2023.03.08
+
+default:
+  tags: 
+    - comp2100
+  cache:
+    # Cache gradle
+    key:
+      files:
+        - android/gradle/wrapper/gradle-wrapper.properties
+    paths:
+      - android/gradle_cache/caches/
+      - android/gradle_cache/notifications/
+      # I think this is needed sometimes (maybe for the lint job?)
+      # - android/gradle_cache/wrapper/
+
+before_script:
+  - cd android
+  - chmod +x ./gradlew
+
+# Build debug apk
+assembleDebug:
+  stage: build
+  script:
+    - ./gradlew assembleDebug --build-cache --gradle-user-home gradle_cache/
+  artifacts:
+    paths:
+      - android/app/build/outputs/
+
+# Run all tests
+test:
+  stage: test
+  script:
+    - ./gradlew test --build-cache --gradle-user-home gradle_cache/
+  artifacts:
+    reports:
+      junit: android/app/build/test-results/**/TEST-*.xml
+    paths:
+      - android/app/build/reports

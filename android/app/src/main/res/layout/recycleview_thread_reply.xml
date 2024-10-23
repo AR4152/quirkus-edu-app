@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".ui.recyclerview.ThreadReply">
+
+    <View
+        android:id="@+id/myRectangleView"
+        android:layout_width="3dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/myRectangleView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/line_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/reply" />
+
+            <TextView
+                android:id="@+id/originalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="\@comp2300"
+                android:textColor="@color/darkblue"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/originalComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hi, do we have a lecture for this week?"
+                android:textSize="9sp"
+                android:textStyle="normal|italic" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/profilepic"
+                android:layout_width="32dp"
+                android:layout_height="35dp"
+                android:translationX="7dp"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/name_text_view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:translationX="17dp" />
+
+            <TextView
+                android:id="@+id/isStaff2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFF00"
+                android:text="Staff"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:translationX="27dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time_text_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:text="1 day ago"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:translationX="7dp" />
+
+        <TextView
+            android:id="@+id/comment_text_view2"
+            android:layout_width="366dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:focusable="auto"
+            android:maxLines="3"
+            android:text="Hi,   Just for double check, this week do we only have one lecture for something new? There are only yesterday’s slides on Wattle.  Thanks!"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:translationX="7dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/comment_text_view2">
+
+            <ImageButton
+                android:id="@+id/upvoteButtonMain2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="16dp"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/upvote" />
+
+            <TextView
+                android:id="@+id/upvoteCountMain2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:text="0"
+                android:translationY="-5dp" />
+
+            <Button
+                android:id="@+id/replyButtonMain2"
+                android:layout_width="54dp"
+                android:layout_height="32dp"
+                android:background="#00FFFFFF"
+                android:text="reply"
+                android:textAllCaps="false"
+                android:textColor="#0D3B66"
+                android:textSize="8sp"
+                android:translationX="0dp"
+                android:translationY="14dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

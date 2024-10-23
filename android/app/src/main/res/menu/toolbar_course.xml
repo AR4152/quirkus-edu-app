@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Search"
+        android:id="@+id/search_post"
+        android:icon="@drawable/search_icon"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:title="Add Post"
+        android:id="@+id/add_post"
+        android:icon="@drawable/add_post_icon"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/manage_tags"
+        android:title="Manage Tags" />
+    <item
+        android:id="@+id/current_enrolments"
+        android:title="Enrolments" />
+
+    <item
+        android:title="Requests"
+        android:id="@+id/enrolment_requests" />
+
+    <item
+        android:title="Archive class"
+        android:id="@+id/archive_class" />
+
+    <item
+        android:title="Leave class"
+        android:id="@+id/leave_class" />
+</menu>

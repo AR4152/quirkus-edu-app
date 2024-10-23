@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Quirkus" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/darkblue</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/darkblue</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Quirkus.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Quirkus.Button">
+        <item name="colorPrimary">@color/textBoxGray</item>
+        <item name="colorOnPrimary">@color/textboxTextGray</item>
+    </style>
+
+    <style name="Theme.Quirkus.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Quirkus.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="overlay" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/white</item>
+    </style>
+</resources>

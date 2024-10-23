@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="#D80F0F"
+    tools:context=".ui.thread.Thread">
+
+    <TextView
+        android:id="@+id/comment_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Hi,   Just for double check, this week do we only have one lecture for something new? There are only yesterday’s slides on Wattle.  Thanks!"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_text_view" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="62dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="Name"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_threads" />
+
+    <TextView
+        android:id="@+id/isStaff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="14dp"
+        android:background="#FFFF00"
+        android:text="Staff"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_threads" />
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="1 day ago"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/name_text_view" />
+
+    <View
+        android:id="@+id/myRectangleView"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/replyButtonMain" />
+
+    <TextView
+        android:id="@+id/connector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="24dp"
+        android:text="in"
+        app:layout_constraintStart_toEndOf="@+id/time_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/name_text_view" />
+
+    <TextView
+        android:id="@+id/tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
+        android:text="Labs"
+        android:textColor="#D30B0B"
+        app:layout_constraintStart_toEndOf="@+id/connector"
+        app:layout_constraintTop_toBottomOf="@+id/name_text_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/replytextholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myRectangleView" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_threads"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/upvoteButtonMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment_text_view"
+        app:srcCompat="@drawable/upvote" />
+
+    <TextView
+        android:id="@+id/upvoteCountMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="12dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/upvoteButtonMain"
+        app:layout_constraintTop_toBottomOf="@+id/comment_text_view" />
+
+    <Button
+        android:id="@+id/replyButtonMain"
+        android:layout_width="54dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#00FFFFFF"
+        android:text="reply"
+        android:textAllCaps="false"
+        android:textColor="#0D3B66"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/upvoteCountMain"
+        app:layout_constraintTop_toBottomOf="@+id/comment_text_view" />
+
+    <View
+        android:id="@+id/replytextholder"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="-10dp"
+        android:background="@drawable/thread_reply_to_popup"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/replytext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/replytext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/thread_reply_box"
+        android:hint="Write your reply..."
+        android:inputType="textMultiLine"
+        android:minHeight="50dp"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/replyto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="replying to #####"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/replytextholder"
+        app:layout_constraintTop_toTopOf="@+id/replytextholder" />
+
+    <Button
+        android:id="@+id/replyButton2"
+        android:layout_width="66dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="7dp"
+        android:text="reply"
+        android:textSize="8sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/replytextholder"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/replyButton3"
+        android:layout_width="66dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="7dp"
+        android:text="reply"
+        android:textSize="8sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/replytextholder"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/cancel"
+        android:layout_width="12dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:background="#00FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/replytextholder"
+        app:layout_constraintTop_toTopOf="@+id/replytextholder"
+        app:srcCompat="@drawable/cancel_but_small" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
