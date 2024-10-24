@@ -46,7 +46,6 @@ Quirkus is an application designed for students, staff, and educational institut
 | **University Use Case**        | **Universities can use the app to facilitate communication and course management**                                                               |
 | Feature 1                      | Universities use the app to improve communication between staff and students.                                                                    |
 | Feature 2                      | Universities use the app to enable easier enrolments and course control.                                                                         |
-| **Additional Instructions**    | Use case diagrams can be created or described to outline the interactions between students, staff, and universities. Refer to the provided link. |
 
 ## 📂 Resources & Collaborators: Learn More About Quirkus
 
