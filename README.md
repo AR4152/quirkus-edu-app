@@ -10,6 +10,10 @@
 
 Quirkus is an application designed for students, staff, and educational institutions to **communicate**, **interact**, and **learn** more efficiently. It serves as a unique forum platform, similar to Piazza, with enhanced features. 🎥 Check out the demo video below to get a quick tour of Quirkus features!
 
+
+https://github.com/user-attachments/assets/b523239f-1285-48eb-ade0-f30088cd45fd
+
+
 <video width="600" controls>
   <source src="./items/videos/features.mp4" type="video/mp4">
   Your browser does not support the video tag.
